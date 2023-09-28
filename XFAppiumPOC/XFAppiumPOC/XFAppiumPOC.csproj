@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <BuildWithMSBuildOnMono>true</BuildWithMSBuildOnMono>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2612" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.5" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.5" />
+    <PackageReference Include="SkiaSharp.Views" Version="2.88.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Telerik.XamarinForms.Common" />
+    <None Remove="Telerik.XamarinForms.Input" />
+    <None Remove="Telerik.XamarinForms.Primitives" />
+    <None Remove="SkiaSharp" />
+    <None Remove="SkiaSharp.Views.Forms" />
+    <None Remove="SkiaSharp.Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Telerik.XamarinForms.Common">
+      <HintPath>..\..\..\..\Desktop\EdgeMobile Screens\Libraries\Telerik\Portable\Telerik.XamarinForms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Input">
+      <HintPath>..\..\..\..\Desktop\EdgeMobile Screens\Libraries\Telerik\Portable\Telerik.XamarinForms.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Primitives">
+      <HintPath>..\..\..\..\Desktop\EdgeMobile Screens\Libraries\Telerik\Portable\Telerik.XamarinForms.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

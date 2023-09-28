@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="True"
+             Title="Appium UI Test"
+             x:Class="XFAppiumPOC.MainPage">
+
+   <StackLayout Margin="20">
+
+        <!--<BoxView HeightRequest="200" BackgroundColor="Aqua"/>-->
+
+            <Label Text="User name" />
+            <Entry  x:Name="UserName" AutomationId="UserName" />
+            <BoxView HeightRequest="10" />
+            <Label Text="Password" />
+            <Entry x:Name="Password"  AutomationId="UserPassword" IsPassword="True" />
+            <BoxView HeightRequest="10" />
+            <Button x:Name="LoginButton" AutomationId="LoginButton" Text="Login" Clicked="LoginButton_Clicked" />
+            <Label x:Name="StatusLabel" AutomationId="StatusLabel" />
+
+        <!--<telerikInput:RadComboBox
+            x:Name="DeviceTypeRadCombo"
+            HeightRequest="60"
+            AutomationId="DeviceTypeRadCombo"
+            VerticalOptions="EndAndExpand"
+            DropDownHeight="200"
+            IsDropDownOpen="{Binding IsDeviceTypeOpen}"
+            Placeholder = "Select Device Type"
+            SelectedItem="{Binding DeviceTypeSelected}"
+            Style="{StaticResource ComboBoxStyle}"
+            >
+            <telerikInput:RadComboBox.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                      <x:String>Item 0</x:String>
+                      <x:String>Item 1</x:String>
+                      <x:String>Item 2</x:String>
+                      <x:String>Item 3</x:String>
+                      <x:String>Item 4</x:String>
+                      <x:String>Item 5</x:String>
+                      <x:String>Item 6</x:String>
+                      <x:String>Item 7</x:String>
+                        <x:String>Item 8</x:String>
+                        <x:String>Item 9</x:String>
+                        <x:String>Item 10</x:String>
+                        <x:String>Item 11</x:String>
+                        <x:String>Item 12</x:String>
+                        <x:String>Item 13</x:String>
+                        <x:String>Item 14</x:String>
+                        <x:String>Item 15</x:String>
+                        <x:String>Item 16</x:String>
+                        <x:String>Item 17</x:String>
+                        <x:String>Item 18</x:String>
+                        <x:String>Item 19</x:String>
+                        <x:String>Item 20</x:String>
+                    <x:String>Item 21</x:String>
+                    <x:String>Item 22</x:String>
+                    <x:String>Item 23</x:String>
+                    <x:String>Item 24</x:String>
+                    <x:String>Item 25</x:String>
+                    <x:String>Item 26</x:String>
+                    <x:String>Item 27</x:String>
+                    <x:String>Item 28</x:String>
+                    <x:String>Item 29</x:String>
+                    <x:String>Item 30</x:String>
+                    <x:String>Item 31</x:String>
+                    <x:String>Item 32</x:String>
+                    <x:String>Item 33</x:String>
+                    <x:String>Item 34</x:String>
+                    <x:String>Item 35</x:String>
+                    <x:String>Item 36</x:String>
+                    <x:String>Item 37</x:String>
+                    <x:String>Item 38</x:String>
+                    <x:String>Item 39</x:String>
+                    <x:String>Item 40</x:String>
+                    <x:String>Item 41</x:String>
+                    <x:String>Item 42</x:String>
+                    <x:String>Item 43</x:String>
+                    <x:String>Item 44</x:String>
+                    <x:String>Item 45</x:String>
+                    <x:String>Item 46</x:String>
+                    <x:String>Item 47</x:String>
+                    <x:String>Item 48</x:String>
+                    <x:String>Item 49</x:String>
+                    <x:String>Item 50</x:String>
+                    </x:Array>
+            </telerikInput:RadComboBox.ItemsSource>
+
+        </telerikInput:RadComboBox>-->
+
+        <!--<telerikInput:RadComboBox
+            x:Name="DeviceTypeRadCombo2"
+            HeightRequest="60"
+            VerticalOptions="CenterAndExpand"
+            AutomationId="DeviceTypeRadCombo2"
+            DropDownHeight="200"
+            IsDropDownOpen="{Binding IsDeviceTypeOpen}"
+            Placeholder = "Select Device Type"
+            SelectedItem="{Binding DeviceTypeSelected}"
+            Style="{StaticResource ComboBoxStyle}"
+            >
+            <telerikInput:RadComboBox.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                      <x:String>Item 0</x:String>
+                      <x:String>Item 1</x:String>
+                      <x:String>Item 2</x:String>
+                      <x:String>Item 3</x:String>
+                      <x:String>Item 4</x:String>
+                      <x:String>Item 5</x:String>
+                      <x:String>Item 6</x:String>
+                      <x:String>Item 7</x:String>
+                        <x:String>Item 8</x:String>
+                        <x:String>Item 9</x:String>
+                        <x:String>Item 10</x:String>
+                        <x:String>Item 11</x:String>
+                        <x:String>Item 12</x:String>
+                        <x:String>Item 13</x:String>
+                        <x:String>Item 14</x:String>
+                        <x:String>Item 15</x:String>
+                        <x:String>Item 16</x:String>
+                        <x:String>Item 17</x:String>
+                        <x:String>Item 18</x:String>
+                        <x:String>Item 19</x:String>
+                        <x:String>Item 20</x:String>
+                    <x:String>Item 21</x:String>
+                    <x:String>Item 22</x:String>
+                    <x:String>Item 23</x:String>
+                    <x:String>Item 24</x:String>
+                    <x:String>Item 25</x:String>
+                    <x:String>Item 26</x:String>
+                    <x:String>Item 27</x:String>
+                    <x:String>Item 28</x:String>
+                    <x:String>Item 29</x:String>
+                    <x:String>Item 30</x:String>
+                    <x:String>Item 31</x:String>
+                    <x:String>Item 32</x:String>
+                    <x:String>Item 33</x:String>
+                    <x:String>Item 34</x:String>
+                    <x:String>Item 35</x:String>
+                    <x:String>Item 36</x:String>
+                    <x:String>Item 37</x:String>
+                    <x:String>Item 38</x:String>
+                    <x:String>Item 39</x:String>
+                    <x:String>Item 40</x:String>
+                    <x:String>Item 41</x:String>
+                    <x:String>Item 42</x:String>
+                    <x:String>Item 43</x:String>
+                    <x:String>Item 44</x:String>
+                    <x:String>Item 45</x:String>
+                    <x:String>Item 46</x:String>
+                    <x:String>Item 47</x:String>
+                    <x:String>Item 48</x:String>
+                    <x:String>Item 49</x:String>
+                    <x:String>Item 50</x:String>
+                    </x:Array>
+            </telerikInput:RadComboBox.ItemsSource>
+
+        </telerikInput:RadComboBox>-->
+
+            
+
+        
+
+            <!--<Picker x:Name="PickerItems"
+                Title="Select a monkey"
+                AutomationId="PickerItems"
+                TitleColor="Red">
+                  <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                      <x:String>Baboon</x:String>
+                      <x:String>Capuchin Monkey</x:String>
+                      <x:String>Blue Monkey</x:String>
+                      <x:String>Squirrel Monkey</x:String>
+                      <x:String>Golden Lion Tamarin</x:String>
+                      <x:String>Howler Monkey</x:String>
+                      <x:String>Japanese Macaque</x:String>
+                    </x:Array>
+                  </Picker.ItemsSource>
+            </Picker>-->
+
+        
+         
+        </StackLayout>
+</ContentPage>
+
