@@ -26,7 +26,7 @@ namespace XFAppiumPOC.Test
 
             string? commandLineArg = Environment.GetCommandLineArgs().FirstOrDefault();
 
-            if (string.IsNullOrEmpty(plateform))
+            if (!string.IsNullOrEmpty(plateform))
             {
                 plateform = commandLineArg;
             }
