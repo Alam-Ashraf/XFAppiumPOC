@@ -24,6 +24,9 @@ namespace XFAppiumPOC.Test
         {
             string? plateform = Environment.GetEnvironmentVariable("PLATEFORM");
 
+            if (string.IsNullOrEmpty(plateform))
+                plateform = "android";
+
             if (plateform.ToLower().Equals("android"))
             {
                 Plateform = Plateform.Android;
