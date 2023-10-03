@@ -15,35 +15,34 @@ namespace XFAppiumPOC.Test
         protected AppiumDriver<AppiumWebElement> driver;
         private Uri driverUri = new Uri("http://127.0.0.1:4723/wd/hub");
         public Plateform Plateform;
-        public string? EnvPlatform = null;
 
         public BaseTest()
         {
             Console.WriteLine("BaseTest() constructor called");
         }
 
-        public void GetPlateforms()
+        private void GetPlateforms()
         {
-            EnvPlatform = Environment.GetEnvironmentVariable("Platform");
+            string? plateform = Environment.GetEnvironmentVariable("Platform");
 
-            Console.WriteLine($"Platform = {EnvPlatform}");
+            Console.WriteLine($"Platform = {plateform}");
 
-            if (!string.IsNullOrEmpty(EnvPlatform))
+            if (!string.IsNullOrEmpty(plateform))
             {
-                EnvPlatform = "android";
+                plateform = "android";
             }
 
-            if (EnvPlatform.ToLower().Equals("android"))
+            if (plateform.ToLower().Equals("android"))
             {
                 Plateform = Plateform.Android;
                 StartAndroidDriver();
             }
-            else if (EnvPlatform.ToLower().Equals("ios"))
+            else if (plateform.ToLower().Equals("ios"))
             {
                 Plateform = Plateform.iOS;
                 StartiOSDriver();
             }
-            else if (EnvPlatform.ToLower().Equals("both"))
+            else if (plateform.ToLower().Equals("both"))
             {
                 Plateform = Plateform.Both;
                 StartAndroidDriver();
