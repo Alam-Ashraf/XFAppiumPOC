@@ -29,7 +29,7 @@ namespace XFAppiumPOC.Test
 
             if (!string.IsNullOrEmpty(plateform))
             {
-                plateform = "ios";
+                plateform = "android";
             }
 
             if (plateform.ToLower().Equals("android"))
