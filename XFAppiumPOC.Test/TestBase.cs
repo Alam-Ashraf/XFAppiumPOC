@@ -27,7 +27,7 @@ namespace XFAppiumPOC.Test
 
             Console.WriteLine($"Platform = {plateform}");
 
-            if (!string.IsNullOrEmpty(plateform))
+            if (string.IsNullOrEmpty(plateform))
             {
                 plateform = "android";
             }
