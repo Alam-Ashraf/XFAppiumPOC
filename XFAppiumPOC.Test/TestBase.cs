@@ -21,7 +21,7 @@ namespace XFAppiumPOC.Test
             Console.WriteLine("BaseTest() constructor called");
         }
 
-        private void GetPlateforms()
+        public void GetPlateforms()
         {
             string? plateform = Environment.GetEnvironmentVariable("Platform");
 
