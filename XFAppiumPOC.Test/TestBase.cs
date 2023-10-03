@@ -9,7 +9,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace XFAppiumPOC.Test
 {
-    //[TestFixture]
+    [TestFixture]
     public class BaseTest
     {
         protected AppiumDriver<AppiumWebElement> driver;
@@ -18,7 +18,7 @@ namespace XFAppiumPOC.Test
 
         public BaseTest()
         {
-            //GetPlateforms();
+            Console.WriteLine("BaseTest() constructor called");
         }
 
         private void GetPlateforms()
@@ -29,7 +29,7 @@ namespace XFAppiumPOC.Test
 
             if (!string.IsNullOrEmpty(plateform))
             {
-                plateform = "android";
+                plateform = "ios";
             }
 
             if (plateform.ToLower().Equals("android"))
@@ -63,6 +63,7 @@ namespace XFAppiumPOC.Test
         [OneTimeSetUp]
         public void SetUp()
         {
+            Console.WriteLine("SetUp() method called");
             GetPlateforms();
             driver.LaunchApp();
         }
