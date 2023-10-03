@@ -55,7 +55,7 @@ namespace XFAppiumPOC.Test
 
         [Test, Order(3)]
         [TestCase(10, 8, 80)]
-        [TestCase(11, 5, 50)]
+        [TestCase(11, 5, 55)]
         //[Order(3)]
         public void TestMultiplyFunctionality(int a, int b, int res)
         {
