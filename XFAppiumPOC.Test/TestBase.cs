@@ -5,6 +5,7 @@ using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Appium.iOS;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace XFAppiumPOC.Test
 {
@@ -22,7 +23,9 @@ namespace XFAppiumPOC.Test
 
         private void GetPlateforms()
         {
-            string? plateform = Environment.GetEnvironmentVariable("PLATEFORM");
+            string? plateform = Environment.GetEnvironmentVariable("PLATFORM");
+
+            Console.WriteLine($"PLATFORM = {plateform}");
 
             string? commandLineArg = Environment.GetCommandLineArgs().FirstOrDefault();
 
