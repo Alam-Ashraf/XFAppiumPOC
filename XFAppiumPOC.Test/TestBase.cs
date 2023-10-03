@@ -55,6 +55,16 @@ namespace XFAppiumPOC.Test
             }
         }
 
+        public void GetEnvironmentVariable()
+        {
+            var platform = Environment.GetEnvironmentVariables();
+
+            foreach(var p in platform)
+            {
+                Console.WriteLine($"Environment Variables  = {p}");
+            }
+        }
+
         [OneTimeSetUp]
         public void SetUp()
         {
