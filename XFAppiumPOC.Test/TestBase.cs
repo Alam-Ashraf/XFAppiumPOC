@@ -57,11 +57,12 @@ namespace XFAppiumPOC.Test
 
         public void GetEnvironmentVariable()
         {
-            var platform = Environment.GetEnvironmentVariables();
+            var environmentVariables = Environment.GetEnvironmentVariables();
 
-            foreach(var p in platform)
+            foreach(var key in environmentVariables.Keys)
             {
-                Console.WriteLine($"Environment Variables  = {p}");
+                var value = environmentVariables[key];
+                Console.WriteLine($"{key} = {value}");
             }
         }
 
