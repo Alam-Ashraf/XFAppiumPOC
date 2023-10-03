@@ -58,6 +58,10 @@ namespace XFAppiumPOC.Test
                 var value = environmentVariables[key];
                 Console.WriteLine($"{key} = {value}");
             }
+
+            string? plateform = Environment.GetEnvironmentVariable("Platform");
+
+            Console.WriteLine($"Platform = {plateform}");
         }
 
         [OneTimeSetUp]
