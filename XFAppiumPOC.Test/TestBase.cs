@@ -65,7 +65,7 @@ namespace XFAppiumPOC.Test
         public void SetUp()
         {
             Console.WriteLine("SetUp() method called");
-            //GetPlateforms();
+            GetPlateforms();
             driver.LaunchApp();
         }
 

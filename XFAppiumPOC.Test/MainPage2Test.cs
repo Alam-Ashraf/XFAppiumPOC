@@ -15,8 +15,6 @@ namespace XFAppiumPOC.Test
        // [Order(1)]
         public void TestLogin()
         {
-            GetPlateforms();
-
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             var userName = driver.FindElement(By.Id("UserName"));
