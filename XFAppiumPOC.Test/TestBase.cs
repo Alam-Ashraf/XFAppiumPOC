@@ -23,17 +23,11 @@ namespace XFAppiumPOC.Test
 
         private void GetPlateforms()
         {
-            string? plateform = Environment.GetEnvironmentVariable("PLATFORM");
+            string? plateform = Environment.GetEnvironmentVariable("Platform");
 
-            Console.WriteLine($"PLATFORM = {plateform}");
-
-            string? commandLineArg = Environment.GetCommandLineArgs().FirstOrDefault();
+            Console.WriteLine($"Platform = {plateform}");
 
             if (!string.IsNullOrEmpty(plateform))
-            {
-                plateform = commandLineArg;
-            }
-            else
             {
                 plateform = "android";
             }
