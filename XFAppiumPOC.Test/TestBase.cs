@@ -157,13 +157,14 @@ namespace XFAppiumPOC.Test
 
             // Create an email message
             MailMessage mail = new MailMessage(senderEmail, recipientEmail);
-            mail.Subject = "HTML Report";
+            mail.Subject = "Mobile UI Automation Report";
             mail.Body = "Please find the attached HTML report.";
 
             // Attach the HTML report file
-            string reportFilePath = "/Users/alamgeer/buildAgentFull (1)/TestResults/Android-TestResults.html"; // Replace with the actual file path
-            Attachment attachment = new Attachment(reportFilePath, MediaTypeNames.Text.Html);
-            mail.Attachments.Add(attachment);
+            string androidFilePath = "/Users/alamgeer/buildAgentFull (1)/TestResults/Android-TestResults.html"; 
+            string iOSFilePath = "/Users/alamgeer/buildAgentFull (1)/TestResults/iOS-TestResults.html"; 
+            mail.Attachments.Add(new Attachment(androidFilePath, MediaTypeNames.Text.Html));
+            mail.Attachments.Add(new Attachment(iOSFilePath, MediaTypeNames.Text.Html));
 
             // Create an SMTP client and send the email
             SmtpClient smtpClient = new SmtpClient(smtpServer);

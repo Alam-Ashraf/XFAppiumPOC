@@ -74,7 +74,7 @@ namespace XFAppiumPOC.Test
 
             ClearFields();
 
-            SendEmail();
+            //SendEmail();
         }
 
         private void ClearFields()
