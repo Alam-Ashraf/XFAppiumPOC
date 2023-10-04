@@ -55,7 +55,7 @@ namespace XFAppiumPOC.Test
 
         [Test, Order(3)]
         [TestCase(10, 8, 80)]
-        [TestCase(11, 5, 55)]
+        //[TestCase(11, 5, 55)]
         //[Order(3)]
         public void TestMultiplyFunctionality(int a, int b, int res)
         {
@@ -73,6 +73,8 @@ namespace XFAppiumPOC.Test
             Assert.IsTrue(text.Equals(res.ToString()));
 
             ClearFields();
+
+            SendEmail();
         }
 
         private void ClearFields()

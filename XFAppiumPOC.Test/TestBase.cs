@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Net.Mail;
+using System.Net.Mime;
+using System.Net;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
@@ -142,6 +145,47 @@ namespace XFAppiumPOC.Test
             return element.GetAttribute(attributName);
         }
 
+        public void SendEmail()
+        {
+            // Email configuration
+            string smtpServer = "smtp.gmail.com";
+            int smtpPort = 465;
+            string smtpUsername = "wft.alamgeer.ashraf@gmail.com";
+            string smtpPassword = "nfwo emkh exlx ybtb";
+            string senderEmail = "wft.alamgeer.ashraf@gmail.com";
+            string recipientEmail = "wft.alamgeer.ashraf@gmail.com";
+
+            // Create an email message
+            MailMessage mail = new MailMessage(senderEmail, recipientEmail);
+            mail.Subject = "HTML Report";
+            mail.Body = "Please find the attached HTML report.";
+
+            // Attach the HTML report file
+            string reportFilePath = "/Users/alamgeer/buildAgentFull (1)/work/TestResults/Android-TestResults.html"; // Replace with the actual file path
+            Attachment attachment = new Attachment(reportFilePath, MediaTypeNames.Text.Html);
+            mail.Attachments.Add(attachment);
+
+            // Create an SMTP client and send the email
+            SmtpClient smtpClient = new SmtpClient(smtpServer);
+            smtpClient.Port = smtpPort;
+            smtpClient.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
+            smtpClient.EnableSsl = true; // Use SSL if your SMTP server supports it
+
+            try
+            {
+                smtpClient.Send(mail);
+                Console.WriteLine("Email sent successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                mail.Dispose();
+                smtpClient.Dispose();
+            }
+        }
     }
 
 
