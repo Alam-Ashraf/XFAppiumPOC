@@ -161,7 +161,7 @@ namespace XFAppiumPOC.Test
             mail.Body = "Please find the attached HTML report.";
 
             // Attach the HTML report file
-            string reportFilePath = "/Users/alamgeer/buildAgentFull (1)/work/TestResults/Android-TestResults.html"; // Replace with the actual file path
+            string reportFilePath = "/Users/alamgeer/buildAgentFull (1)/TestResults/Android-TestResults.html"; // Replace with the actual file path
             Attachment attachment = new Attachment(reportFilePath, MediaTypeNames.Text.Html);
             mail.Attachments.Add(attachment);
 
