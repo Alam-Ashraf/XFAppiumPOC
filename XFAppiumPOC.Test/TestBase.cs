@@ -149,7 +149,7 @@ namespace XFAppiumPOC.Test
         {
             // Email configuration
             string smtpServer = "smtp.gmail.com";
-            int smtpPort = 465;
+            int smtpPort = 587;
             string smtpUsername = "wft.alamgeer.ashraf@gmail.com";
             string smtpPassword = "nfwo emkh exlx ybtb";
             string senderEmail = "wft.alamgeer.ashraf@gmail.com";
