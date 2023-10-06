@@ -18,8 +18,8 @@ mail.Subject = "Mobile UI Automation Report";
 mail.Body = "Please find the attached HTML report.";
 
 // Attach the HTML report file
-string androidFilePath = "/Users/alamgeer/buildAgentFull (1)/work/9ec880e1a311ca6d/TestResults/Android-TestResults.html";
-string iOSFilePath = "/Users/alamgeer/buildAgentFull (1)/work/9ec880e1a311ca6d/TestResults/iOS-TestResults.html";
+string androidFilePath = "/Users/alamgeer/buildAgentFull/work/9ec880e1a311ca6d/TestResults/Android-TestResults.html";
+string iOSFilePath = "/Users/alamgeer/buildAgentFull/work/9ec880e1a311ca6d/TestResults/iOS-TestResults.html";
 mail.Attachments.Add(new Attachment(androidFilePath, MediaTypeNames.Text.Html));
 mail.Attachments.Add(new Attachment(iOSFilePath, MediaTypeNames.Text.Html));
 
